@@ -58,4 +58,28 @@ function removeFirstSpace(text) {
     return text;
 }
 
+console.log('\nRunning test from index.js \n');
+
+let scannedItems = 'Macbook Pro, Rasberry Pi B, Macbook Pro, Rasberry Pi B';
+let total = calculateOrder(scannedItems);
+
+console.log('Scanned Items:', scannedItems);
+console.log('Total:', total);
+console.log('Expected:', 5399.99 * 2);
+
+scannedItems = 'Google Home, Google Home, Google Home';
+total = calculateOrder(scannedItems);
+
+console.log('\nScanned Items:', scannedItems);
+console.log('Total:', total);
+console.log('Expected:', 49.99 * 2);
+
+scannedItems = 'Alexa Speaker, Alexa Speaker, Alexa Speaker, Alexa Speaker';
+total = calculateOrder(scannedItems);
+
+console.log('\nScanned Items:', scannedItems);
+console.log('Total:', total);
+console.log('Expected:', (109.50 * 4) - (109.50 * 4 * 10 / 100));
+console.log();
+
 module.exports = { calculateOrder };

@@ -1,7 +1,7 @@
 const { calculateOrder } = require('./index');
 
 xit('buy mac free rasberry pi', () => {
-    const scannedItems = 'Macbook Pro, Rasberry Pi B, Macbook Pro, Rasberry Pi B, Rasberry Pi B';
+    const scannedItems = 'Macbook Pro, Rasberry Pi B, Macbook Pro, Rasberry Pi B';
     const total = calculateOrder(scannedItems);
 
     expect(total).toBe(5399.99 * 2);
